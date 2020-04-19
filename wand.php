@@ -29,7 +29,7 @@ class curl {
                 curl_setopt($this->ch, CURLOPT_POSTFIELDS, $param);
                 break;
         }
-        curl_setopt($this->ch, CURLOPT_URL, 'https://api-ahass.wahanahonda.com​'.$url);
+        curl_setopt($this->ch, CURLOPT_URL, 'api-ahass.wahanahonda.com​'.$url);
         curl_setopt($this->ch, CURLOPT_USERAGENT, 'okhttp/3.12.1');
         curl_setopt($this->ch, CURLOPT_HEADER, false);
         curl_setopt($this->ch, CURLOPT_HTTPHEADER, $header);
@@ -42,7 +42,7 @@ class curl {
         $this->error = curl_error($this->ch);
         if(!$this->result){
             if($this->error) {
-                echo "[!] ".date('H:i:s')." | cURL Error: Gagal terhubung ke Server MotorQX!\n";
+                echo "[!] ".date('H:i:s')." | cURL Error: Server full sob!\n";
                 sleep(1);
                 goto curl;
             } else {
